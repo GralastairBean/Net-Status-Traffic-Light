@@ -11,6 +11,7 @@
 	- green = LED(17)
 	- red = LED(27)
 	- yellow = LED(22)
+- The script is running on a headless Pi so need to SSH in via Raspi Connect [here.](https://connect.raspberrypi.com/devices)
 - To edit the script...
 	- `sudo systemctl stop internet-led.service` (to stop it)
 	- `nano internet.py` (opens editor)
