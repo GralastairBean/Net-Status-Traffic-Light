@@ -4,11 +4,12 @@ import signal
 import sys
 from gpiozero import LED
 
+# set GPIO pins for status LEDs
 green = LED(17)
 red = LED(27)
 yellow = LED(22)
 
-# If a ping replies slower than this many milliseconds, call it "slow"
+# If a ping > threshold = "slow" = yellow light
 SLOW_THRESHOLD = 100
 
 def get_latency():
@@ -55,4 +56,4 @@ while True:
     else:
         green.on()                # online and fast
 
-    time.sleep(3)
+    time.sleep(3)                 # check every 3 seconds
